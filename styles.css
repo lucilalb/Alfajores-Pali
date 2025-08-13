@@ -92,6 +92,13 @@ body{
 
 /*productos*/
 
+.h2-productos{
+      display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
 .productos{
     height: 25vh;
     width: auto;
@@ -103,34 +110,94 @@ body{
    display: grid;
    grid-template-columns: repeat(3,1fr);
    grid-template-rows: repeat(2,1fr);
+   gap: 15px;
+   margin-left: 30px;
+   margin-bottom: 30px;
+   margin-top: 30px;
 }
 
-.choco-ner{
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
+.h3-prod{
+    margin-bottom: 10px;
 }
+
+
 
 
 /*contacto*/
  form{
 display: grid;
 grid-template-columns: repeat(3,1fr);
-grid-template-rows: repeat(5,1fr) ;    /*modificar form*/
+grid-template-rows: repeat(5,1fr) ; 
+gap: 15px;   /*modificar form*/
 padding: 15px;
+margin-left: 30px;
+
  }
 
 
 /*ferias y eventos*/
 .ferias{
-    height: 30vh;
+    height: 50vh;
     width: auto;
+}
+
+.h2-ferias{
+    font-family:"Funnel sans";
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.ferias-ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.h3-west{
+   font-family: "Funnel sans";
+   margin-bottom: 2px;
+}
+
+.h3-feria{
+     font-family: "Funnel sans";
+   margin-bottom: 2px;
 }
 
 /*quienes somos*/
 .h2-quien{
-    
+     font-family:"Funnel sans";
+    display: flex;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
 }
 
+.img-fam{
+     width: 60vh;        
+    height: auto;        
+    border-radius: 8px;  
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.p-quien{
+    font-family: "Funnel sans";
+    max-width: 1000px;
+
+    text-align: justify;
+
+}
+
+
+.quienes-somos{
+     display: flex;        
+    align-items: center;  
+    gap: 20px;
+}
 /*footer*/
 
 footer{
