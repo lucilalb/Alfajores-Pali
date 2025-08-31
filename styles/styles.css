@@ -52,18 +52,23 @@ a{
     color: black;
 }
 
-@media (max-width: 430px) {
-    header {
-      
- 
+@media (max-width: 425px){
+   header {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
     }
-    .header-h1{
+    .header-h1 {
         display: none;
     }
+    .nav-he {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
 
 }
-
-
+}
 
 /*index*/
 
@@ -75,6 +80,7 @@ a{
 }
 
 body{
+    background-color: antiquewhite;
      font-family: "Funnel sans"
 }
 .main-index{
@@ -88,6 +94,22 @@ body{
     object-fit: cover;
     object-position: center;
    
+}
+
+@media  (max-width: 425px) {
+    .img-car {
+        max-height: 200px;
+    }
+    .h2-in {
+        font-size: 1.2rem;
+        margin: 10px 0;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 0.9rem;
+        padding: 0 10px;
+        text-align: justify;
+    }
 }
 
 /*productos*/
@@ -120,6 +142,22 @@ body{
     margin-bottom: 10px;
 }
 
+@media (max-width: 425px) {
+    .h2-productos {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .productos- {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 10px;
+    }
+    .productos {
+        height: auto;
+        max-width: 100%;
+    }
+}
 
 
 
@@ -133,6 +171,16 @@ padding: 15px;
 margin-left: 30px;
 
  }
+@media (max-width: 425px) {
+    form {
+        grid-template-columns: 1fr;
+        margin: 10px;
+        gap: 10px;
+    }
+    input, textarea {
+        width: 100%;
+    }
+}
 
 
 /*ferias y eventos*/
@@ -167,6 +215,26 @@ margin-left: 30px;
    margin-bottom: 2px;
 }
 
+@media (max-width: 425px) {
+    .h2-ferias {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .ferias-ul {
+        grid-template-columns: 1fr 1fr; 
+        margin: 10px;
+        gap: 10px;
+    }
+    .ferias {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+
 /*quienes somos*/
 .h2-quien{
      font-family:"Funnel sans";
@@ -198,6 +266,33 @@ margin-left: 30px;
     align-items: center;  
     gap: 20px;
 }
+
+@media (max-width: 425px) {
+    .h2-quien {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .quienes-somos {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .img-fam {
+        width: 90%;
+        margin: 0 auto 20px;
+    }
+    .p-quien {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        text-align: justify;
+    }
+}
+
+
+
+
+
 /*footer*/
 
 footer{
@@ -216,3 +311,15 @@ footer{
     width: auto;
 }
 
+@media screen and (max-width: 425px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+    .Redes {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+}
