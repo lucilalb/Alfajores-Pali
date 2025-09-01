@@ -1,0 +1,62 @@
+@use "variables" as v;
+@use "anima";
+
+.main-index{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .h2-in {
+        text-align: center;
+        margin-bottom: 30px;
+        color: v.$colorSecundario;
+          @include anima.fadeIn(1s);
+    }
+
+    .img-car{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+      @include anima.fadeIn(1s);
+}
+.texto1{
+    font-size: 20px;
+    text-align: center;
+    max-width: 1000rem;
+    color: v.$colorSecundario;
+    margin-top: 30px;
+      @include anima.fadeIn(1s);
+
+}
+.texto2{
+    font-size: 20px;
+    text-align: center;
+    max-width: 1000rem;
+    color: v.$colorSecundario;
+      @include anima.fadeIn(1s);
+}
+@include v.mobile{
+        .h2-in {
+      font-size: 1.5rem;  
+      margin-bottom: 20px;
+    }
+
+    .texto1,
+    .texto2 {
+      font-size: 16px;     
+      margin-top: 15px;
+      padding: 0 10px;    
+    }
+
+    .img-car {
+      max-height: 250px;   
+    }
+  }
+
+}
+

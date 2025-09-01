@@ -1,0 +1,41 @@
+@use "variables" as v;
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: v.$colorPrimario;
+
+    .nav-footer {
+        display: flex;
+        gap: 20px;
+        border: 2px solid #{v.$colorSecundario};
+        border-radius: 15px;
+        gap: 10px;
+
+        li {
+             list-style: none;
+        }
+    }
+
+    .Redes{
+    height: 5vh;
+    width: auto;
+}
+.footer-title{
+    font-size: 1.5rem;
+    color: v.$colorSecundario;
+}
+   @include v.mobile{
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+     .Redes {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+}

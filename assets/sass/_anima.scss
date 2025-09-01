@@ -1,0 +1,33 @@
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+
+%scaleUp {
+  animation: scale 1s forwards ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@mixin fadeIn($time: 1s) {
+  animation: fadeIn $time ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+@mixin pulse($time: 1s) {
+  animation: pulse $time infinite;
+}
+

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfajores Pali-Contacto</title>
 
-   <link rel="stylesheet" href="../../styles/styles.css">
+   <link rel="stylesheet" href="../styles/styles.css">
 
 </head>
 <body>
@@ -31,7 +31,8 @@
             </ul>
         </nav>
     </header>  
-    <main>
+    <main class="main-contacto">
+        <h2 class="h2-in">Contáctenos y déjenos su consulta</h2>
         <form>
             <label class="name">Nombre:</label>
             <input type="text" name="_nombre"placeholder="Juan Goméz">
@@ -45,19 +46,26 @@
             <label>Acercanos tu consulta sobre nuestros productos y realiza tu encargo.</label>
             <textarea  name="_consulta" placeholder="Dejanos tu consulta o tu pedido."></textarea>
             <br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
+            <input class="btn" type="submit" value="Enviar">
+            <input class="btn" type="reset" value="Borrar">
             
          </form>
+
+         <div class="map-container">
+            <h2 class="map-title">Ubicación</h2>
+            <div class="map">
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.162030529543!2d-58.47725822445966!3d-34.57476647296469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb66ffc426e1d%3A0x6be85c16f5e8d0de!2sDUM%2C%20Mariano%20Acha%201947%2C%20C1430%20C1430DUM%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1756678991611!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+         </div>
     </main>
 
-     <footer>
-        <h2>Derechos reservados a Alfajores Pali</h2>
+    <footer>
+        <h2 class="footer-title">Derechos reservados a Alfajores Pali</h2>
 
         <nav>
-            <ul class="nav-he">
+            <ul class="nav-footer">
                 <li>
-                    <a href="https://www.instagram.com/alfajorespali?igsh=YWJkZWdqeWEwdnAw" target="_blank">
+                     <a href="https://www.instagram.com/alfajorespali?igsh=YWJkZWdqeWEwdnAw" target="_blank">
                         <img class="Redes" src="../img/instagram.avif" alt="Logo de instagram" title="logo de instagram">
                     </a>
                 </li>

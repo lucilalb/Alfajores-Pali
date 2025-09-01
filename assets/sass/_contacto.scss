@@ -1,0 +1,96 @@
+@use "variables" as v;
+@use "anima";
+
+.main-contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+      @include anima.fadeIn(1s);
+    .h2-in{
+        font-size: 2rem;
+        color: v.$colorSecundario;
+          
+    }
+      form{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        padding: 15px;
+        margin-left: 30px;
+        gap: 15px;  
+          
+       }
+       label{
+           font-size: 1.2rem;
+           color: v.$colorSecundario;
+            
+       }
+         input, textarea{
+              border: 2px solid v.$colorSecundario;
+              border-radius: 10px;
+              padding: 5px;
+                 }
+
+                 .btn{
+                  @include anima.pulse(1.2s);
+                 }
+            
+                 .map-container{
+             width: 100%;
+             height: 400px;
+            margin-top: 20px;
+            margin-bottom: 60px;
+             }
+            .map-title{
+                text-align: center;
+                font-size: 1.5rem;
+                color: v.$colorSecundario;
+                margin-bottom: 30px;
+            }
+
+            .map{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                margin-bottom: 30px;
+            }
+@include v.mobile{
+
+    padding: 10px;
+    gap: 15px;
+    .h2-in {
+      font-size: 1.5rem; 
+    }
+     form {
+      display: flex;
+      flex-direction: column; 
+      margin-left: 0;
+      gap: 10px;
+    }
+    label {
+       font-size: 1rem; 
+    }
+    input,
+    textarea {
+       width: 100%; 
+       padding: 8px;
+    }
+    .map-container {
+      width: 100%;
+      height: 200px; 
+      margin-top: 50px; 
+      margin-bottom: 50px; 
+    }
+    .map-title {
+       font-size: 1.2rem;
+       margin-bottom: 20px;
+    }
+    .map {
+       margin-bottom: 20px;
+    }
+  }
+
+}

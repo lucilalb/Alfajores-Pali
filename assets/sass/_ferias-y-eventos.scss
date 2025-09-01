@@ -1,0 +1,94 @@
+@use "variables" as v;
+@use "anima";
+
+.main-ferias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+     .h2-ferias{
+         font-size: 2rem;
+         color: v.$colorSecundario;
+         display: flex;
+         margin-bottom: 30px;
+         margin-top: 30px;
+         margin-left: 30px;
+         }
+       .ferias-ul{
+          list-style: none;
+          display: flex;
+          margin-left:30px;
+         margin-top: 30px;
+        }
+        .ferias{
+          height: 50vh;
+          width: auto;
+          border: 2px solid #{v.$colorSecundario};
+          border-radius: 15px;
+          object-fit: cover;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+          &:hover {
+    @extend %scaleUp; 
+           }
+        }
+        .h3-west, .h3-feria{
+          font-size: 1.5rem;
+          color: v.$colorSecundario;
+          margin-bottom: 10px;
+           @include anima.fadeIn(1s);
+        }
+        .text-west, .text-feria{
+          font-size: 1.1rem;
+          line-height: 1.6;
+          text-align: justify;
+          font-weight: 400;
+          color: v.$colorSecundario;
+          margin-bottom: 15px;
+          max-width: 600px;
+            margin-top: 10px;
+             @include anima.fadeIn(1s);
+        }
+
+    @include v.mobile{
+        .h2-ferias{
+            font-size: 1.5rem;
+        }
+        .h3-west, .h3-feria{
+            font-size: 1.2rem;
+        }
+        .text-west, .text-feria{
+            font-size: 1rem;
+        }
+        .ferias{
+            height: auto;
+            width: 100%;
+            max-width: 350px;
+        }
+        .ferias-ul{
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0;
+            gap: 20px;
+        }
+        .ferias-img{
+            max-width: 100%;
+            border-radius: 15px 15px 0 0;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .ferias-text{
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: v.$colorSecundario;
+            border-radius: 0 0 15px 15px;
+            max-width: 350px;
+        }
+        .ferias-footer{
+            padding: 15px;
+            background-color: v.$colorSecundario;
+            border-radius: 0 0 15px 15px;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@use "variables" as v;
+@import "anima";
+
+header{
+    background-color: v.$colorPrimario;
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    top: 0;
+    padding: 10px;
+    .logo {
+    width: auto;
+    height: 15vh;
+    margin: 10px;
+     &:hover {
+    @extend %scaleUp; 
+  }
+
+}
+
+.header-h1{
+    color: v.$colorSecundario;
+    font-size: 2.5rem;
+    text-align: center;
+}
+    
+
+.nav-he{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+ul{
+    list-style: none;
+    border: 2px solid #{v.$colorSecundario};
+    border-radius: 15px;
+    gap: 10px;
+
+
+}
+
+a{
+    text-decoration: none;
+    color: #{v.$colorSecundario};
+    font-size: 20px;
+}
+
+
+
+
+@include v.mobile{
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+     .header-h1 {
+        display: none;
+    }
+    .nav-he {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+   }
+}
+
+}

@@ -1,0 +1,68 @@
+@use "variables" as v;
+@use "anima";
+
+.main-quienes-somos{
+     margin: 40px auto;
+     max-width: 1200px;
+ 
+    
+    .h2-quien{
+        font-size: 2rem;
+        color: v.$colorSecundario;
+        text-align: center;
+        margin-bottom: 20px; 
+          @include anima.fadeIn(1s);
+    }
+
+    .quienes-somos{
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        flex-wrap: wrap;
+
+    }
+
+    .lostextos{
+         flex: 1;  
+         font-size: 1.1rem;
+         line-height: 1.6;
+         text-align: justify;
+         font-weight: 400;
+         color: v.$colorSecundario;
+           @include anima.fadeIn(1s);
+    }
+    
+    .img-fam{
+        width: 420px;  
+        height: auto;
+        border-radius: 15px;
+       box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+         @include anima.fadeIn(1s);
+    }
+
+    @include v.mobile{
+         .quienes-somos {
+      flex-direction: column; 
+      align-items: center;
+      gap: 15px;
+    }
+
+    .img-fam {
+      width: 100%;        
+      max-width: 350px;   
+    }
+
+    .lostextos {
+      font-size: 1rem;    
+      text-align: left;   
+      padding: 0 10px;    
+    }
+
+    .h2-quien {
+      font-size: 1.5rem;  
+    }
+    }
+
+
+
+}

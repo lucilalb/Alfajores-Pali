@@ -1,0 +1,78 @@
+@use "variables" as v;
+@use"anima";
+
+.h2-productos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: v.$colorSecundario;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid #{v.$colorSecundario};
+}
+
+.productos{
+    height: 25vh;
+    width: auto;
+    border: 2px solid #{v.$colorSecundario};
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   &:hover {
+    @extend %scaleUp; 
+  }
+   
+    
+}
+
+
+.productos-{
+   padding: 15px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(2,1fr);
+   gap: 15px;
+   margin-top: 30px;
+   margin-left: 30px;
+   margin-right: 30px;
+     @include anima.fadeIn(1s);
+
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+.h3-prod{
+    margin-bottom: 10px;
+    color: v.$colorSecundario;
+    font-size: 1.2rem;
+
+}
+
+@include v.mobile{
+   .h2-productos {
+    margin: 20px 10px;
+    font-size: 1.2rem;
+    border-width: 1.5px;
+  }
+
+  .productos {
+    height: auto; 
+    width: 100%;  
+  }
+
+  .productos- {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 10px;
+  }
+
+  .h3-prod {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
