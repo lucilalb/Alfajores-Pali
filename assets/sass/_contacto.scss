@@ -33,21 +33,34 @@
               padding: 5px;
                  }
 
-                 .btn{
-                  @include anima.pulse(1.2s);
-                 }
+         .btn{
+         @include anima.pulse(1.2s);
+              }
             
-                 .map-container{
+         .map-container{
+             position: relative;
+             width: 90%;
+             max-width: 600px;
+             height: 350px;
+             margin: 30px auto;
+             border: 2px solid v.$colorSecundario;
+             border-radius: 15px;
+             overflow: hidden;
+             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            }
+          iframe{
              width: 100%;
-             height: 400px;
-            margin-top: 20px;
-            margin-bottom: 60px;
-             }
+             height: 100%;
+             border: 0;
+             display: block;
+          }
+
+            
             .map-title{
-                text-align: center;
-                font-size: 1.5rem;
-                color: v.$colorSecundario;
-                margin-bottom: 30px;
+             text-align: center;
+             font-size: 1.5rem;
+             color: v.$colorSecundario;
+             margin-bottom: 30px;
             }
 
             .map{
@@ -55,7 +68,7 @@
                 justify-content: center;
                 align-items: center;
                 height: 100%;
-                margin-bottom: 30px;
+               
             }
 @include v.mobile{
 
@@ -79,8 +92,8 @@
        padding: 8px;
     }
     .map-container {
-      width: 100%;
-      height: 200px; 
+      width: 95%;
+      height: 250px; 
       margin-top: 50px; 
       margin-bottom: 50px; 
     }

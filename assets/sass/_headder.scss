@@ -1,5 +1,5 @@
 @use "variables" as v;
-@import "anima";
+@use"anima";
 
 header{
     background-color: v.$colorPrimario;
@@ -10,9 +10,14 @@ header{
     height: 15vh;
     top: 0;
     padding: 10px;
+    z-index: 1000;
+    border: 2px solid #{v.$colorSecundario};
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px;
+
     .logo {
     width: auto;
-    height: 15vh;
+    height: 13vh;
     margin: 10px;
      &:hover {
     @extend %scaleUp; 
@@ -24,6 +29,7 @@ header{
     color: v.$colorSecundario;
     font-size: 2.5rem;
     text-align: center;
+    margin-top: 10px;
 }
     
 

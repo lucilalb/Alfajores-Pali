@@ -12,6 +12,7 @@
     .h2-in {
         text-align: center;
         margin-bottom: 30px;
+        margin-top: 20px;
         color: v.$colorSecundario;
           @include anima.fadeIn(1s);
     }
